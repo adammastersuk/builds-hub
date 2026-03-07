@@ -3,21 +3,21 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/snake',
-        destination: 'https://snake-modern-adammastersuks-projects.vercel.app',
-      },
-      {
-  source: '/snake/:path*',
-  destination: 'https://snake-modern-adammastersuks-projects.vercel.app/:path*',
+  source: '/snake',
+  destination: 'https://snake-modern-adammastersuks-projects.vercel.app/snake',
 },
-      {
-        source: '/reaction-speed-test',
-        destination: 'https://reaction-speed-test-opal.vercel.app',
-      },
-      {
-        source: '/reaction-speed-test/:path*',
-        destination: 'https://reaction-speed-test-opal.vercel.app/:path*',
-      },
+{
+  source: '/snake/:path*',
+  destination: 'https://snake-modern-adammastersuks-projects.vercel.app/snake/:path*',
+},
+{
+  source: '/reaction-speed-test',
+  destination: 'https://YOUR-REACTION-APP.vercel.app/reaction-speed-test',
+},
+{
+  source: '/reaction-speed-test/:path*',
+  destination: 'https://YOUR-REACTION-APP.vercel.app/reaction-speed-test/:path*',
+},
     ];
   },
 };
