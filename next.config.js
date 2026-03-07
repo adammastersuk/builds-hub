@@ -12,11 +12,11 @@ const nextConfig = {
 },
 {
   source: '/reaction-speed-test',
-  destination: 'https://YOUR-REACTION-APP.vercel.app/reaction-speed-test',
+  destination: 'https://reaction-speed-test-opal.vercel.app/reaction-speed-test',
 },
 {
   source: '/reaction-speed-test/:path*',
-  destination: 'https://YOUR-REACTION-APP.vercel.app/reaction-speed-test/:path*',
+  destination: 'https://reaction-speed-test-opal.vercel.app/reaction-speed-test/:path*',
 },
     ];
   },
