@@ -20,11 +20,11 @@ const nextConfig = {
       },
       {
         source: '/aim-trainer',
-        destination: 'https://adammasters.co.uk/aim-trainer'
+        destination: 'https://aim-trainer-neon.vercel.app/aim-trainer'
       },
       {
         source: '/aim-trainer/:path*',
-        destination: 'https://adammasters.co.uk/aim-trainer/:path*'
+        destination: 'https://aim-trainer-neon.vercel.app/aim-trainer/:path*'
       }
     ];
   }
