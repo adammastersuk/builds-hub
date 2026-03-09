@@ -24,7 +24,7 @@ const nextConfig = {
       },
       {
         source: '/aim-trainer/:path*',
-        destination: 'https://aim-trainer-neon.vercel.app/aim-trainer/:path*'
+        destination: 'https://aim-trainer-neon.vercel.app/:path*'
       }
     ];
   }
