@@ -7,11 +7,20 @@ type BuildCardProps = {
   type: string;
   status: string;
   platform: string;
+  ctaLabel?: string;
 };
 
-export function BuildCard({ title, description, href, type, status, platform }: BuildCardProps) {
+export function BuildCard({
+  title,
+  description,
+  href,
+  type,
+  status,
+  platform,
+  ctaLabel = 'Open build'
+}: BuildCardProps) {
   return (
-    <Link className="build-card" href={href} aria-label={`Open ${title}`}>
+    <Link className="build-card" href={href} aria-label={`${ctaLabel}: ${title}`}>
       <div className="build-card__meta" aria-label="Project metadata">
         <span>{type}</span>
         <span>{status}</span>
@@ -20,7 +29,7 @@ export function BuildCard({ title, description, href, type, status, platform }: 
       <h3>{title}</h3>
       <p>{description}</p>
       <span className="build-card__cta" aria-hidden="true">
-        Open build →
+        {ctaLabel} →
       </span>
     </Link>
   );
