@@ -2,14 +2,26 @@ import { BuildCard } from '@/components/BuildCard';
 
 const MAIN_WEBSITE_URL = process.env.NEXT_PUBLIC_MAIN_WEBSITE_URL ?? 'https://adammasters.co.uk';
 
-const builds = [
+type Build = {
+  title: string;
+  description: string;
+  href: string;
+  type: string;
+  status: string;
+  platform: string;
+  ctaLabel?: string;
+};
+
+const builds: Build[] = [
   {
-    title: 'Snake',
-    description: 'A refined take on the classic arcade game, complete with persistent leaderboard scoring.',
-    href: '/snake',
+    title: 'Aim Trainer',
+    description:
+      'A fast browser-based aim test focused on accuracy, reaction time, and consistency over a 30-second run.',
+    href: '/aim-trainer',
     type: 'Game',
     status: 'Live',
-    platform: 'Desktop + Mobile'
+    platform: 'Desktop + Mobile',
+    ctaLabel: 'Play now'
   },
   {
     title: 'Reaction Speed Test',
@@ -18,7 +30,17 @@ const builds = [
     href: '/reaction-speed-test',
     type: 'Tool',
     status: 'Live',
-    platform: 'Desktop + Mobile'
+    platform: 'Desktop + Mobile',
+    ctaLabel: 'Play now'
+  },
+  {
+    title: 'Snake',
+    description: 'A refined take on the classic arcade game, complete with persistent leaderboard scoring.',
+    href: '/snake',
+    type: 'Game',
+    status: 'Live',
+    platform: 'Desktop + Mobile',
+    ctaLabel: 'Play now'
   }
 ];
 
@@ -26,15 +48,15 @@ export default function HomePage() {
   return (
     <main className="container">
       <a className="back-link" href={MAIN_WEBSITE_URL}>
-        ← Back to main website
+        ← Back to main site
       </a>
 
       <header className="header">
         <p className="eyebrow">Builds Hub</p>
         <h1>Small projects, thoughtfully built.</h1>
         <p>
-          This hub is a curated home for my interactive experiments and practical mini-builds. Each
-          project is intentionally scoped, continuously improved, and easy to explore from one place.
+          A curated home for my interactive experiments and practical mini-builds. Every project is
+          intentionally scoped, continuously improved, and quick to jump into.
         </p>
       </header>
 
@@ -45,15 +67,7 @@ export default function HomePage() {
 
       <section className="build-grid" aria-label="Available builds">
         {builds.map((build) => (
-          <BuildCard
-            key={build.href}
-            title={build.title}
-            description={build.description}
-            href={build.href}
-            type={build.type}
-            status={build.status}
-            platform={build.platform}
-          />
+          <BuildCard key={build.href} {...build} />
         ))}
       </section>
     </main>

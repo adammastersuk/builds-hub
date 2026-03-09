@@ -39,22 +39,32 @@ a {
   display: grid;
   align-content: start;
   gap: 1.5rem;
-  padding: 2rem 0 3rem;
+  padding: 1.6rem 0 3rem;
 }
 
 .back-link {
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  transition: color 150ms ease;
+  gap: 0.45rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  padding: 0.48rem 0.78rem;
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  transition:
+    color 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease;
 }
 
 .back-link:hover,
 .back-link:focus-visible {
   color: var(--text-primary);
+  border-color: color-mix(in oklab, var(--accent) 42%, var(--surface-border));
+  background: color-mix(in oklab, var(--accent) 18%, var(--surface));
 }
 
 .header {
@@ -114,11 +124,13 @@ a {
 
 .build-card {
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 0.8rem;
   padding: 1.2rem;
   border-radius: 14px;
   background: linear-gradient(165deg, #17171e 0%, var(--surface) 100%);
   border: 1px solid var(--surface-border);
+  min-height: 220px;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -160,16 +172,17 @@ a {
 }
 
 .build-card__cta {
-  margin-top: 0.15rem;
+  margin-top: 0.35rem;
   color: var(--accent);
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
 @media (max-width: 640px) {
   .container {
-    width: min(960px, calc(100% - 1.5rem));
-    padding: 1.1rem 0 2rem;
-    gap: 1.2rem;
+    width: min(960px, calc(100% - 1.25rem));
+    padding: 1rem 0 2rem;
+    gap: 1.1rem;
   }
 
   .section-heading {

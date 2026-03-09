@@ -15,7 +15,8 @@ Production target domain:
 Examples:
 
 - `/snake` → `https://snake-build.vercel.app`
-- `/reaction-speed-test` → `https://reaction-test.vercel.app`
+- `/reaction-speed-test` → `https://reaction-speed-test-opal.vercel.app/reaction-speed-test`
+- `/aim-trainer` → `https://adammasters.co.uk/aim-trainer`
 
 ## Tech stack
 
@@ -39,7 +40,8 @@ Rewrites are configured in `next.config.js`.
 Current routes:
 
 - `/snake/:path*` → `https://snake-build.vercel.app/:path*`
-- `/reaction-speed-test/:path*` → `https://reaction-test.vercel.app/:path*`
+- `/reaction-speed-test/:path*` → `https://reaction-speed-test-opal.vercel.app/reaction-speed-test/:path*`
+- `/aim-trainer/:path*` → `https://adammasters.co.uk/aim-trainer/:path*`
 
 ## Adding a new build
 
