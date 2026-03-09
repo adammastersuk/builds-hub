@@ -20,12 +20,16 @@ const nextConfig = {
       },
       {
         source: '/aim-trainer',
-        destination: 'https://aim-trainer-neon.vercel.app/aim-trainer'
+        destination: 'https://aim-trainer-neon.vercel.app'
+      },
+      {
+        source: '/aim-trainer/',
+        destination: 'https://aim-trainer-neon.vercel.app/'
       },
       {
         source: '/aim-trainer/:path*',
         destination: 'https://aim-trainer-neon.vercel.app/:path*'
-      }
+      },
     ];
   }
 };
