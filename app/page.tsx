@@ -41,6 +41,16 @@ const builds: Build[] = [
     status: 'Live',
     platform: 'Desktop + Mobile',
     ctaLabel: 'Play now'
+  },
+  {
+    title: 'Bulk Image Resizer',
+    description:
+      'A practical ecommerce image tool for fast batch resizing with presets, crop/fill modes, and export controls. Built to speed up repetitive product image preparation workflows.',
+    href: 'https://bulk-image-resizer-mu.vercel.app/',
+    type: 'Tool',
+    status: 'Live',
+    platform: 'Desktop + Mobile',
+    ctaLabel: 'Open tool'
   }
 ];
 
